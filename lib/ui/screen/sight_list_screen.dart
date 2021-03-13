@@ -12,13 +12,34 @@ class _SightListScreenState extends State<SightListScreen> {
     var bgColor = Theme.of(context).scaffoldBackgroundColor;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Список\nинтересных мест",
-          style: TextStyle(
-            color: kAppBarTextColor,
-            fontSize: 32,
-            fontFamily: 'Roboto',
-            fontWeight: FontWeight.w700,
+        title: RichText(
+          text: TextSpan(
+            style: TextStyle(
+              color: kAppBarTextColor,
+              fontSize: 32,
+              fontFamily: 'Roboto',
+              fontWeight: FontWeight.w700,
+            ),
+            children: [
+              TextSpan(
+                text: "С",
+                style: TextStyle(
+                  color: kAppBarTextFirstLetterColor,
+                ),
+              ),
+              TextSpan(
+                text: "писок\n",
+              ),
+              TextSpan(
+                text: "и",
+                style: TextStyle(
+                  color: kAppBarTextSecondLetterColor,
+                ),
+              ),
+              TextSpan(
+                text: "нтересных мест",
+              ),
+            ],
           ),
         ),
         backgroundColor: bgColor,
